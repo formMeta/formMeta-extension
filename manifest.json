@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "formMeta",
+  "description": "It is an simple extension which helps to covert google form into an custom UI with some additional features",
+  "version": "1.0",
+  "permissions": [
+    "scripting",
+    "activeTab"],
+  "icons": {
+    "16": "./images/logo16.png",
+    "48": "./images/logo48.png",
+   "128": "./images/logo128.png"
+ },
+  "content_scripts": [
+    
+    {
+      "matches": [
+        "https://docs.google.com/forms/*/viewform"
+      ],
+      "js": [
+        "./popup.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+    
+  ],
+  "host_permissions": [
+    "https://docs.google.com/forms/*/viewform"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
