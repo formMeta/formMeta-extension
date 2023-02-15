@@ -97,7 +97,7 @@ alert(`Did not find ${searchValue} in the form`);
       // Create an anchor element and set its href attribute to the URL of the Blob object
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = 'generatedFile.html';
+      a.download = 'formMeta.html';
   
       // Append the anchor element to the document and simulate a click on it to trigger the download
       document.body.appendChild(a);
