@@ -120,13 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <title>${heading}</title>
 
         </head>
-        <body>
+        <body onload="checkCookie()">
             <center>
                 <h1>${heading}</h1>
             </center>
             <div id="myDiv" class="enabled"></div>
             <div class="iframePopup">
-            <h2 style="color: red;">❗Click ok to continue❗</h2>
+            <h2 style="color: red;">&#10071; Click ok to continue &#10071;</h2>
             <iframe frameborder="0" name="formview"></iframe>
             <a onclick='setCookie("isCompleted", "completed", 30);window.open("https:\/\/formmeta.github.io/generateform/thankyou.html","_self");'>oK</a>
         </div>
