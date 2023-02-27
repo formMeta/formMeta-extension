@@ -5,8 +5,8 @@
   var text_input_name = [];
   var name_id = [];
   var question_array = [];
-
-
+  var responseStatus = 'ok';
+  var errorValue = ' ';
 
 
   const form = document.getElementsByTagName("form")[0];
@@ -149,6 +149,13 @@
     }
 
   }
-  // return [main_array,name_id];
-  return [main_array,name_id];
+
+  if(document.getElementsByTagName('input')['token']){
+    responseStatus='Error';
+    errorValue= 'Disable the <b>Limit to 1 response</b>'
+  } 
+  if(responseStatus=='Error'){
+    return [responseStatus,errorValue];
+  }
+  return [responseStatus,main_array,name_id];
 })();
